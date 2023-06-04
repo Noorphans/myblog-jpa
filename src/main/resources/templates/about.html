@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+
+<!--导航-->
+<nav th:replace="_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+  <div class="ui container">
+    <div class="ui inverted secondary stackable menu">
+      <h2 class="ui pink header item">Blog</h2>
+      <a href="#" class="m-item item m-mobile-hide"><i class="small home icon"></i>首页</a>
+      <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon"></i>分类</a>
+      <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon"></i>标签</a>
+      <a href="#" class="m-item item m-mobile-hide"><i class="small clone icon"></i>归档</a>
+      <a href="#" class="active m-item item m-mobile-hide"><i class="small info icon"></i>关于我</a>
+      <div class="right m-item item m-mobile-hide">
+        <div class="ui icon inverted transparent input m-margin-tb-tiny">
+          <input type="text" placeholder="Search....">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 边导航图标 -->
+  <!-- menu toggle无显示意义，只是为了jQuery获取这个元素，也可以加id -->
+  <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+    <!-- jQuery按钮，点击时控制手机端图标，class移除显示出来，加上就隐藏 -->
+    <i class="sidebar icon"></i>
+  </a>
+</nav>
+
+<!--中间内容-->
+<div  class="m-container-small m-padded-tb-big">
+  <div class="ui container">
+    <div class="ui stackable grid" style="opacity: 0.86">
+      <!--左边关于我-->
+      <div class="eleven wide column animated rotateInDownLeft">
+        <div class="ui segment">
+          <br/>
+          <p class="m-black m-text">一位从CV圈跳转到IT行业的95后，白天黑夜在前端不断折腾的小姐姐，又开始接触了后端;学不会往死里学，永远都在慢慢的爬.<br/>
+            <br/>
+            热爱编程，喜欢折腾，正在努力攀爬，学习代码规范、分支管理规范、Java语言、Vue和React相关技术栈并在探索高效学习编程技术的方法...
+            <br/>
+          <h2 class="m-black">About my blog</h2>
+          <br/>
+          <p class="m-black">域 名： 创建于2023年05月18日&nbsp;</p>
+          <br/>
+          <p class="m-black">服务器：腾讯云服务器&nbsp;</p>
+          <br/>
+          <p class="m-black">备案号：黔ICP备2023004385号 </p>
+          <br/>
+          <p class="m-black">开发技术：Java&nbsp;&nbsp;&nbsp; Spring Boot&nbsp;&nbsp;&nbsp;JPA&nbsp;&nbsp;&nbsp;Semantic UI框架&nbsp;&nbsp;&nbsp;MySQL&nbsp;</p>
+          </p>
+          <br/>
+        </div>
+      </div>
+      <!--右边关于我-->
+      <div class="five wide column animated rotateInDownRight">
+        <div class="ui top attached segment">
+          <div class="ui pink m-opacity-mini header">关于我</div>
+        </div>
+        <div class="ui card attached ">
+          <a class="image" href="#">
+            <img class="ui medium circular image" src="https://images.newstar.net.cn/img/165135-1632127895c615.jpg">
+          </a>
+          <div class="content m-text-center">
+            <a class="ui pink m-opacity-mini header" href="#">卿抒z</a>
+          </div>
+        </div>
+        <div class="ui attached segment">
+          <div class="ui pink basic left pointing label m-opacity-mini">编程</div>
+          <div class="ui pink basic left pointing label m-opacity-mini">写作</div>
+          <div class="ui pink basic left pointing label m-opacity-mini">思考</div>
+          <div class="ui pink basic left pointing label m-opacity-mini">运动</div>
+        </div>
+        <div class="ui attached segment">
+          <div class="ui pink basic left pointing label m-margin-tb-tiny">Java</div>
+          <div class="ui pink basic left pointing label m-margin-tb-tiny">JavaScript</div>
+          <div class="ui pink basic left pointing label m-margin-tb-tiny">Node</div>
+          <div class="ui pink basic left pointing label m-margin-tb-tiny">React</div>
+          <div class="ui pink basic left pointing label m-margin-tb-tiny">RN</div>
+          <div class="ui pink basic left pointing label m-margin-tb-tiny">MYSQL</div>
+          <div class="ui pink basic left pointing label m-margin-tb-tiny">...</div>
+        </div>
+        <div class="ui bottom attached segment">
+          <a href="#" class="ui circular icon button"><i class="black github icon"></i></a>
+          <a href="#" class="ui wechat circular icon button"><i class="green weixin icon"></i></a>
+          <a href="#" class="ui qq circular icon button" data-content="1756481871" data-position="bottom center"><i class="blue qq icon"></i></a>
+        </div>
+        <div class="ui wechat-qr flowing popup transition hidden">
+          <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br>
+<br>
+<!--底部footer-->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+  <div class="ui center aligned container">
+    <div class="ui inverted divided stackable grid">
+      <div class="three wide column">
+        <div class="ui inverted link list">
+          <div class="item">
+            <img src="../static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 110px">
+          </div>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced " >最新博客</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item m-text-thin">Email：zmq.z@qq.com</a>
+          <a href="#" class="item m-text-thin">QQ：1756481871</a>
+        </div>
+      </div>
+      <div class="seven wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+      </div>
+    </div>
+    <div class="ui inverted section divider"></div>
+    <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2022 - 2023 Zhangcaixia Designed by Zhangcaixa</p>
+  </div>
+
+</footer>
+
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script>
+  $('.menu.toggle').click(function () {
+    $('.m-item').toggleClass('m-mobile-hide');
+  });
+
+  $('.wechat').popup({
+    popup : $('.wechat-qr'),
+    position: 'bottom center'
+  });
+  $('.qq').popup();
+
+</script>
+</body>
+</html>

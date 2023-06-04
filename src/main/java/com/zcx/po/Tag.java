@@ -1,0 +1,64 @@
+package com.zcx.po;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @Author：卿抒z
+ * @Package：com.zcx.po
+ * @Project：blog
+ * @name：Tag
+ * @Date：2023/2/26 17:28
+ * @Filename：Tag
+ */
+@Entity
+@Table(name = "t_tag")
+public class Tag {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+
+    @ManyToMany(mappedBy = "tags")
+    private List<Blog> blogs = new ArrayList<>();
+
+    public Tag() {
+    }
+
+    public Long getId() {
+
+        return id;
+    }
+
+    public void setId(Long id) {
+
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
+    }
+
+    @Override
+    public String toString() {
+        return "Tag{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
