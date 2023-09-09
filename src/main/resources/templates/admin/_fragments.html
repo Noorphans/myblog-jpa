@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="head(title)">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:replace="${title}">博客详情</title>
+  <link href="http://images.newstar.net.cn/img/%E6%A8%B1%E8%8A%B1.png" rel="icon" type="image/x-ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}">
+  <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<body>
+
+<!--导航-->
+<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+  <div class="ui container">
+    <div class="ui center inverted secondary stackable menu">
+      <h2 class="ui pink header item">管理后台</h2>
+      <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'">
+        <i class="small m-pink home icon "></i>
+        <span style="color: #E03997" >博客</span>
+      </a>
+      <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'">
+        <i class="small m-pink idea icon"></i>
+        <span style="color: #E03997">分类</span>
+      </a>
+      <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'">
+        <i class="small m-pink tags icon"></i>
+        <span style="color: #E03997">标签</span>
+      </a>
+      <div class="right m-item m-mobile-hide menu">
+        <div class="ui dropdown  item">
+          <div class="text">
+            <img class="ui avatar image" src="https://p5.itc.cn/images01/20220310/fbd9fd02d6604e2ab9ba18254beb21ad.jpeg" style="width:30px; height:100px; border-radius:50%;" th:src="@{${session.user.avatar}}">
+            <span style="color: #E03997" th:text="${session.user.nickname}">Noorphans</span>
+          </div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="ui menu toggle icon button m-right-top m-mobile-show">
+    <i class="m-pink sidebar icon"></i>
+  </a>
+</nav>
+
+
+
+
+<!--底部footer-->
+<footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive" style="opacity: 0.9;background-color: rgba(250, 233, 239,1)">
+  <div class="ui center aligned container">
+    <div class="ui inverted divided stackable grid">
+      <div class="three wide column">
+        <div class="ui inverted link list">
+          <div class="item">
+            <img src="../../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}"  class="ui rounded image" alt="" style="width: 110px">
+          </div>
+        </div>
+      </div>
+      <div class="three wide column" >
+        <h4 class="ui inverted header m-pink m-text-thin m-text-spaced " >最新博客</h4>
+        <div id="newblog-container">
+          <div class="ui inverted link list" th:fragment="newblogList">
+            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newblogs}" th:text="${blog.title}">用户故事（User Story）</a>
+            <!--/*-->
+            <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+            <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+            <!--*/-->
+          </div>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header m-pink m-text-thin m-text-spaced ">联系我</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item m-pink m-text-thin" th:text="#{index.email}">Email：zmq.z@qq.com</a>
+          <a href="#" class="item m-pink m-text-thin" th:text="#{index.qq}">QQ：1756481871</a>
+        </div>
+      </div>
+      <div class="seven wide column">
+        <h4 class="ui inverted header m-pink m-text-thin m-text-spaced ">Blog</h4>
+        <p class="m-text-thin m-pink m-text-spaced m-opacity-mini" th:text="#{index.blogDescription}">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+      </div>
+    </div>
+    <div class="ui inverted section divider"></div>
+    <p class="m-text-thin m-pink m-text-spaced m-opacity-tiny">Copyright © 2022 - <span th:text="${#dates.year(#dates.createNow())}">2023</span> Noorphans Designed by Noorphans</p>
+    <p class="m-pink m-text-thin m-margin-top-small"><a href="https://beian.miit.gov.cn/" class="beian" target="_blank">黔ICP备2023004385号-1</a></p>
+    <div class="m-pink m-text-thin" id="runtime_span"></div>
+  </div>
+
+</footer>
+
+<th:block th:fragment="script">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+  <script>
+    $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+  </script>
+
+  <!--本站运行时间-->
+  <script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new
+  Date("10/24/2022 5:22:00");
+    Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
+    a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
+    runtime_span.innerHTML="本小主的博客已经勉强撑到: "+A+"天"+B+"小时"+C+"分"+D+"秒" + "｡◕‿◕｡"}show_runtime();
+  </script>
+</th:block>
+
+</body>
+</html>

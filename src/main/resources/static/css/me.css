@@ -1,0 +1,369 @@
+
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur), auto;
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/*光标定位*/
+a {
+    cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/No_Disponible.cur), auto;
+}
+
+p {
+    cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/texto.cur), auto;
+}
+
+
+/*整体内部间隔*/
+.m-padded-mini {
+    padding: 0.2em !important;
+}
+/*认知升级内部间隔做引用*/
+.m-padded-tiny {
+    padding: 0.3em !important;
+}
+.m-padded {
+    padding: 1em !important;
+}
+
+/*整体内部间距级别，1个em递减,mall>tiny>mini;huge>big>large*/
+/*缩小导航栏上下之间内部间隔，一个em就是16个像素*/
+.m-padded-tb-mini {
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+.m-padded-tb-tiny {
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+.m-padded-tb-small {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+.m-padded-tb {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.m-padded-tb-large {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.m-padded-tb-big {
+    padding-top: 2em !important;
+    padding-bottom: 3em !important;
+}
+.m-padded-tb-huge {
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+/*间距最大效果*/
+.m-padded-tb-massive {
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+
+/*中间博客文章内容左右间距缩小*/
+.m-padded-lr-responsive {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+
+/*-------text文本设置-----*/
+
+/*字与字之间的间距，字体样式*/
+/*中间博客描述内容做引用*/
+.m-text {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8;
+}
+
+/*字体变小*/
+.m-text-thin {
+    font-weight: 300 !important;
+}
+/*字间距*/
+.m-text-spaced {
+    letter-spacing: 1px !important;
+}
+/*行间距*/
+.m-text-lined {
+    line-height: 1.8;
+}
+
+/*-----margin------*/
+/*右侧最新推荐上下间距*/
+.m-margin-top-small {
+    margin-top:0.5em !important;
+}
+.m-margin-top {
+    margin-top: 1em !important;
+}
+.m-margin-top-large {
+    margin-top: 2em !important;
+}
+/*外部间隔*/
+/*右侧标签框上下间距*/
+.m-margin-tb-tiny {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+
+.m-margin-bottom-small {
+    margin-bottom: 0.5em !important;
+
+}
+
+/*-----opacity透明度------*/
+/*底部字体透明*/
+.m-opacity-mini {
+    opacity: 0.8 !important;
+}
+.m-opacity-tiny {
+    opacity: 0.6 !important;
+}
+
+
+/*------display共14篇------*/
+/* 显示框类型，行内块级元素inline bolock */
+.m-inline-block {
+    display: inline-block !important;
+}
+
+
+/*-----container*/
+/*中间区域整体居中*/
+.m-container {
+    max-width: 72em !important;
+    margin: auto !important;
+}
+.m-container-small {
+    max-width: 60em !important;
+    margin: auto !important;
+}
+
+/*------shadow阴影------*/
+.m-shadow-small {
+    -webkit-box-shadow: 0 4px 8px rgb(255, 229, 237) !important;
+    box-shadow: 0 4px 4px rgb(255, 229, 237) !important;
+
+}
+
+/*------positon-----*/
+/*导航栏右侧小屏幕图标*/
+.m-right-top {
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+/*目录生成*/
+.m-fixed {
+    position: fixed !important;
+    z-index: 10 !important;
+}
+.m-right-bottom {
+    bottom: 45% !important;
+    right: 0 !important;
+}
+
+/*关于我*/
+.m-text-center {
+    text-align: center;
+}
+
+/*-----color-----*/
+/*后台导航栏阴影部分*/
+.ui.inverted.attached.segment {
+    border-color: rgba(250, 233, 239,0.85);
+}
+
+/*鼠标点击选中状态*/
+.ui.secondary.inverted.menu .active.item{
+    background-color: rgba(122, 124, 118, 0.22);
+}
+.ui.secondary.inverted.menu>a:hover{
+    background-color: rgba(122, 124, 118, 0.22) !important;
+}
+
+.menucolor {
+    color: #E03997; !important;
+}
+
+.m-black {
+    color: #f96cbb !important;
+}
+/*中间博客标题、最新推荐选中状态*/
+a.m-black:hover {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+/*标签选中状态*/
+.ui.pink.segment > a.ui.basic.pink.label:hover{
+    color: rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(0, 0, 0, 0.4) !important;
+}
+.right.aligned.five.wide.column > a.ui.basic.pink.label:hover{
+    color: rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.morebq:hover {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+/*左下角标签*/
+a.ui.basic.left.pointing.large.label.m-margin-tb-tiny.biaoqian:hover{
+    color: #E03997 !important
+}
+a.ui.basic.left.pointing.label.m-padded-mini.m-text-thin.biaoqian:hover{
+    color: #E03997 !important
+}
+/*下一页选中状态*/
+a.ui.basic.pink.button, .ui.basic.pink.buttons .button：hover{
+    box-shadow: 0 0 0 1px #f96cbb inset !important;
+    color: #f96cbb !important;
+
+}
+
+.dropdown.icon {
+    color: rgba(224, 57, 151, 0.94);
+}
+
+.m-teal {
+    color: #00B5AD !important;
+}
+
+.m-pink {
+    color: #f96cbb !important;
+}
+
+.m-orange {
+    color:  #e0b4b4 !important;
+}
+/*评论区发布图标*/
+.ui.button.m-mobile-wide {
+    background-color: #ffaada;
+    color: #FFFFFF;
+}
+/*目录生成背景*/
+.ui.toc.button {
+    background-color: #fabadc;
+    color: #FFFFFF;
+}
+.ui.button {
+    background-color: #fabadc;
+    color: #FFFFFF;
+}
+a.ui.button:hover{
+    color: rgba(0, 0, 0, 0.4) !important;
+    background-color: #fabadc;
+}
+.ui.wechat.icon.button {
+    background-color: #fad8e9;
+    color: #FFFFFF;
+}
+.ui.icon.button {
+    background-color: #fad8e9;
+    color: #FFFFFF;
+}
+
+/*博客详情页左上角管理员选中状态*/
+.adminz:hover {
+    color: rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(0, 0, 0, 0.4) !important;
+}
+.ui.basic.pink.label:hover{
+    color: rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+/*后台返回选中状态*/
+.ui.button:hover{
+    color: rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(0, 0, 0, 0.4) !important;
+}
+/*后台保存选中状态*/
+.ui.secondary.button, .ui.secondary.buttons .button{
+    color: #FFFFFF;
+    background-color: #bbbaba;
+}
+
+/*后台博客返回保存发布*/
+.ui.button.return {
+    background-color: #fabadc;
+}
+.ui.button.save {
+    background-color: #fd92cc;
+}
+.ui.button.fb {
+    background-color: #e3b8b8;
+}
+
+/*后台分类返回提交*/
+.ui.submit.button {
+    background-color: #e3b8b8;
+}
+
+
+/*关于我联系方式图标*/
+.ui.circular.icon.button {
+    background-color: #f1f0f0;
+}
+
+/*底部栏背景*/
+.ui.inverted.segment, .ui.primary.inverted.segment{
+    background-color: rgba(250, 233, 239,0.85);
+}
+/*底部字体*/
+a.item.m-text-thin{
+    color: #f96cbb !important;
+}
+/*底部字体选中状态*/
+a.item.m-text-thin:hover{
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+/*备案选中状态*/
+ a.beian:hover {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+a.beian {
+    color: #f96cbb !important;
+}
+
+
+/* 手机端显示边导航图标*/
+.m-mobile-show {
+   display: none !important;
+}
+/* 小屏幕样式 */
+@media screen and (max-width: 768px){
+    /*当屏幕小于768像素时即手机端隐藏*/
+    .m-mobile-hide {
+        display: none !important;
+    }
+    /*导航右侧图标宽屏隐藏*/
+    .m-mobile-show {
+        display: block !important;
+    }
+    .m-padded-lr-responsive {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .m-mobile-lr-clear {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .m-mobile-wide {
+        width: 100% !important;
+    }
+
+}
+
+.ui.menu {
+    font-size: 1rem;
+    margin-top: 22px;
+}
