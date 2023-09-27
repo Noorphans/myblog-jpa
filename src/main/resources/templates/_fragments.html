@@ -135,28 +135,32 @@
   </script>
 
   <!--看板娘-->
-  <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Fofade/cnblogsThemes/live2dw/lib/L2Dwidget.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Fofade/cnblogsThemes/live2dw/lib/L2Dwidget.0.min.js"></script>
   <script>
     L2Dwidget.init({
-      model: {
-        jsonPath: 'https://unpkg.com/live2d-widget-model-nipsilon/assets/nipsilon.model.json',
-        scale: 1
+      "model": {
+        //json 文件资源路径，可以相对路径 也可支持网络路径，此处使用的是网络路径
+        jsonPath:"https://unpkg.com/live2d-widget-model-nipsilon/assets/nipsilon.model.json",
+        "scale": 1 //模型缩放系数
       },
-      display: {
-        position: 'right', //模型的表现位置
-        width: 120, //模型的宽度
-        height: 300, //模型的高度
-        hOffset: 0,
-        vOffset: -200
+      //模型样式布局
+      "display": {
+        "position": "right",
+        "width": 200,
+        "height": 200,
+        "hOffset": 0,
+        "vOffset": -20
       },
-      mobile: {
-        show: true,
-        scale: 0.5
+      //移动端
+      "mobile": {
+        "show": true,
+        "scale": 0.5
       },
-      react: {
-        opacityDefault: 0.7, //模型默认透明度
-        opacityOnHover: 0.2
-      }
+      "react": {
+        "opacityDefault": 0.7,
+        "opacityOnHover": 0.3 }
     });
   </script>
 
